@@ -3,6 +3,7 @@ package com.sparta.mg.librarywebapp.controller;
 import com.sparta.mg.librarywebapp.model.entities.Author;
 import com.sparta.mg.librarywebapp.model.repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,12 +25,14 @@ public class AuthorController {
         return "author";
     }
 
+    @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping("/authors")
     public String getAllAuthors(Model model) {
         model.addAttribute("authors", authorRepository.findAll());
         return "authors";
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/author/edit/{id}")
     public String getAuthorToEdit(@PathVariable Integer id, Model model) {
         Author author = authorRepository.findById(id).orElse(null);
