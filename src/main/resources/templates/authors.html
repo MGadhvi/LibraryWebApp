@@ -23,20 +23,19 @@
 </head>
 <body>
 <h1>Author Details</h1>
-<span th:if="${author==null}">Author not found</span>
-<span th:unless="${author==null}">
 <table>
     <thead>
     <tr>
         <th>ID</th>
         <th>Full Name</th>
+        <th>Books</th>
     </tr>
     </thead>
-    <tr>
+    <tr th:each="author : ${authors}">
         <td th:text="${author.id}"></td>
         <td th:text="${author.fullName}"></td>
+        <td th:text="${author.books}"></td>
     </tr>
 </table>
-    </span>
 </body>
 </html>

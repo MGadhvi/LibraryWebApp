@@ -1,4 +1,4 @@
-package com.sparta.mg.librarywebexample.model.entities;
+package com.sparta.mg.librarywebapp.model.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -18,7 +18,6 @@ public class Book {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
-    @JsonBackReference
     private Author author;
 
     public Integer getId() {
@@ -47,10 +46,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author=" + author +
-                '}';
+        return title;
     }
 }

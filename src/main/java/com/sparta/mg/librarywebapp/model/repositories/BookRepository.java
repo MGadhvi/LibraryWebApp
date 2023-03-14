@@ -1,6 +1,6 @@
-package com.sparta.mg.librarywebexample.model.repositories;
+package com.sparta.mg.librarywebapp.model.repositories;
 
-import com.sparta.mg.librarywebexample.model.entities.Book;
+import com.sparta.mg.librarywebapp.model.entities.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

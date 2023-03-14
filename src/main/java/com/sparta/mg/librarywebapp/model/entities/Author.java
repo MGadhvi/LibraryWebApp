@@ -1,4 +1,4 @@
-package com.sparta.mg.librarywebexample.model.entities;
+package com.sparta.mg.librarywebapp.model.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
@@ -49,5 +49,14 @@ public class Author {
 
     public void setBooks(List<Book> books) {
         this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", books=" + books +
+                '}';
     }
 }
