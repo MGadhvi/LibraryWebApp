@@ -1,4 +1,4 @@
-package com.sparta.mg.librarywebapp.model.controller;
+package com.sparta.mg.librarywebapp.controller;
 
 import com.sparta.mg.librarywebapp.model.entities.Author;
 import com.sparta.mg.librarywebapp.model.repositories.AuthorRepository;

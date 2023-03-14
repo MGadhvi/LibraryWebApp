@@ -1,4 +1,4 @@
-package com.sparta.mg.librarywebapp.model.controller;
+package com.sparta.mg.librarywebapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
