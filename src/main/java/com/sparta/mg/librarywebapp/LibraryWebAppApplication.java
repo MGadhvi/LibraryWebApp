@@ -15,11 +15,11 @@ public class LibraryWebAppApplication {
         SpringApplication.run(LibraryWebAppApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner runner(UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        return args -> {
-            userRepository.save(new User("user", passwordEncoder.encode("password"), "ROLE_USER"));
-            userRepository.save(new User("admin", passwordEncoder.encode("password"), "ROLE_USER,ROLE_ADMIN"));
-        };
-    }
+//    @Bean
+//    CommandLineRunner runner(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+//        return args -> {
+//            userRepository.save(new User("user", passwordEncoder.encode("password"), "ROLE_USER"));
+//            userRepository.save(new User("admin", passwordEncoder.encode("password"), "ROLE_USER,ROLE_ADMIN"));
+//        };
+//    }
 }
